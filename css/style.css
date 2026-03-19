@@ -10,7 +10,6 @@ body {
   color: #fff;
 }
 
-/* GORNJA TRAKA BOJA */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -41,7 +40,6 @@ body {
   border: 1px solid #000;
 }
 
-/* HERO */
 .hero {
   display: flex;
   justify-content: center;
@@ -63,7 +61,6 @@ body {
   gap: 30px;
 }
 
-/* prozirna siva kutija iza teksta */
 .hero-text {
   font-size: 22px;
   font-weight: normal;
@@ -88,7 +85,6 @@ body {
   font-weight: bold;
 }
 
-/* FOOTER INFO (donji dio) */
 .info {
   display: flex;
   justify-content: space-between;
@@ -107,7 +103,6 @@ body {
   width: 15%;
 }
 
-/* osnovna responzivnost */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -130,8 +125,6 @@ body {
     width: 100%;
   }
 }
-
-/* O NAMA */
 
 .about {
   display: flex;
@@ -169,7 +162,6 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
-/* responzivno za mobitel */
 @media (max-width: 768px) {
   .about {
     flex-direction: column;
@@ -181,7 +173,6 @@ body {
   }
 }
 
-/* CJENIK */
 .menu-page {
   max-width: 900px;
   margin: 40px auto 60px;
@@ -196,7 +187,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* ACCORDION BLOK – kategorije */
 .menu-accordion {
   background-color: #3a3a3a;
   border-radius: 6px;
@@ -204,7 +194,6 @@ body {
   padding: 2px 8px 2px;
 }
 
-/* NASLOV KATEGORIJE (klik) */
 .menu-accordion > summary {
   list-style: none;
   cursor: pointer;
@@ -218,10 +207,9 @@ body {
   display: none;
 }
 
-/* STAVKE: NAZIV | KOLIČINA | CIJENA */
 .menu-item {
   display: grid;
-  grid-template-columns: 1fr 90px 90px;  /* ime | količina | cijena */
+  grid-template-columns: 1fr 90px 90px; 
   column-gap: 10px;
   padding: 6px 0;
   border-bottom: 1px dashed rgba(255,255,255,0.2);
@@ -235,8 +223,8 @@ body {
 .item-size {
   font-size: 13px;
   opacity: 0.9;
-  text-align: left;       /* ili center ako želiš */
-  white-space: nowrap;    /* drži 0,75 l u jednom redu */
+  text-align: left;     
+  white-space: nowrap;   
 }
 
 .item-price {
@@ -244,7 +232,6 @@ body {
   text-align: right;
 }
 
-/* mobitel */
 @media (max-width: 600px) {
   .menu-page {
     margin: 20px 10px 40px;
@@ -255,8 +242,6 @@ body {
     font-size: 14px;
   }
 }
-
-/* GALERIJA */
 
 .gallery-page {
   max-width: 1100px;
@@ -279,9 +264,8 @@ body {
   justify-content: center;
 }
 
-/* 4 slike: 2x2 na većim ekranima */
 .gallery-item {
-  flex: 1 1 calc(50% - 15px);  /* 2 u redu */
+  flex: 1 1 calc(50% - 15px); 
   max-width: 400px;
   border-radius: 6px;
   overflow: hidden;
@@ -290,7 +274,7 @@ body {
 .gallery-item {
   flex: 1 1 calc(50% - 15px);
   max-width: 400px;
-  height: 280px;           /* FIKSNA VISINA - po želji */
+  height: 280px;          
   border-radius: 6px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.4);
@@ -303,7 +287,6 @@ body {
   display: block;
 }
 
-/* mobitel: i dalje 2 u redu, ali manje širine */
 @media (max-width: 600px) {
   .gallery-page {
     margin: 20px 10px 40px;
@@ -314,8 +297,6 @@ body {
     flex: 1 1 calc(50% - 10px);
   }
 }
-
-/* KONTAKT STRANICA */
 
 .kontakt-page {
   max-width: 1100px;
@@ -385,7 +366,6 @@ body {
   margin-bottom: 10px;
 }
 
-/* mobitel */
 @media (max-width: 600px) {
   .kontakt-page {
     margin: 20px 10px 40px;
