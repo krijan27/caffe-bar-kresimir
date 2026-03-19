@@ -1,0 +1,413 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #222222;
+  color: #fff;
+}
+
+/* GORNJA TRAKA BOJA */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #323131;
+  border-bottom: 1px solid black;
+}
+
+.logo {
+  font-size: 20px;
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #4a4a4a;
+  border-radius: 4px;
+  border: 1px solid #000;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 20px;
+  background-image: url("../img/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* prozirna siva kutija iza teksta */
+.hero-text {
+  font-size: 22px;
+  font-weight: normal;
+  background-color: rgba(53, 53, 53, 0.6);
+  padding: 15px 20px;
+  display: inline-block;
+}
+
+.hero p {
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border: 1px solid #ffffff;
+  background-color: #3c3c3c;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* FOOTER INFO (donji dio) */
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  background-color: #323131;
+  border-top: 1px solid black;
+}
+
+.info h2 {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.left,
+.right {
+  width: 15%;
+}
+
+/* osnovna responzivnost */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .info {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+}
+
+/* O NAMA */
+
+.about {
+  display: flex;
+  gap: 40px;
+  padding: 40px 40px 60px;
+  background-color: #222222;
+  color: #ffffff;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* responzivno za mobitel */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    padding: 30px 20px 40px;
+  }
+
+  .about-image {
+    margin-top: 10px;
+  }
+}
+
+/* CJENIK */
+.menu-page {
+  max-width: 900px;
+  margin: 40px auto 60px;
+  padding: 20px 25px 30px;
+  background-color: #323131;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.menu-page h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ACCORDION BLOK – kategorije */
+.menu-accordion {
+  background-color: #3a3a3a;
+  border-radius: 6px;
+  margin-top: 25px;
+  padding: 2px 8px 2px;
+}
+
+/* NASLOV KATEGORIJE (klik) */
+.menu-accordion > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.menu-accordion > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* STAVKE: NAZIV | KOLIČINA | CIJENA */
+.menu-item {
+  display: grid;
+  grid-template-columns: 1fr 90px 90px;  /* ime | količina | cijena */
+  column-gap: 10px;
+  padding: 6px 0;
+  border-bottom: 1px dashed rgba(255,255,255,0.2);
+}
+
+
+.item-name {
+  text-align: left;
+}
+
+.item-size {
+  font-size: 13px;
+  opacity: 0.9;
+  text-align: left;       /* ili center ako želiš */
+  white-space: nowrap;    /* drži 0,75 l u jednom redu */
+}
+
+.item-price {
+  font-weight: bold;
+  text-align: right;
+}
+
+/* mobitel */
+@media (max-width: 600px) {
+  .menu-page {
+    margin: 20px 10px 40px;
+    padding: 15px 15px 20px;
+  }
+
+  .menu-item {
+    font-size: 14px;
+  }
+}
+
+/* GALERIJA */
+
+.gallery-page {
+  max-width: 1100px;
+  margin: 40px auto 60px;
+  padding: 20px 25px 30px;
+  background-color: #323131;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.gallery-page h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* 4 slike: 2x2 na većim ekranima */
+.gallery-item {
+  flex: 1 1 calc(50% - 15px);  /* 2 u redu */
+  max-width: 400px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+.gallery-item {
+  flex: 1 1 calc(50% - 15px);
+  max-width: 400px;
+  height: 280px;           /* FIKSNA VISINA - po želji */
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* mobitel: i dalje 2 u redu, ali manje širine */
+@media (max-width: 600px) {
+  .gallery-page {
+    margin: 20px 10px 40px;
+    padding: 15px 15px 25px;
+  }
+
+  .gallery-item {
+    flex: 1 1 calc(50% - 10px);
+  }
+}
+
+/* KONTAKT STRANICA */
+
+.kontakt-page {
+  max-width: 1100px;
+  margin: 40px auto 60px;
+  padding: 20px 25px 30px;
+  background-color: #323131;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.kontakt-page h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.kontakt-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.kontakt-forma {
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.kontakt-forma label {
+  font-weight: 600;
+}
+
+.kontakt-forma input,
+.kontakt-forma textarea {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #555;
+  background-color: #222;
+  color: #fff;
+}
+
+.kontakt-forma button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ba8b02;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.kontakt-forma button:hover {
+  background-color: #d4a017;
+}
+
+#poruka-status {
+  margin-top: 10px;
+  min-height: 18px;
+}
+
+.kontakt-info {
+  flex: 1 1 250px;
+}
+
+.kontakt-info h2 {
+  margin-bottom: 10px;
+}
+
+/* mobitel */
+@media (max-width: 600px) {
+  .kontakt-page {
+    margin: 20px 10px 40px;
+    padding: 15px 15px 25px;
+  }
+}
+
+.working-hours {
+  margin-top: 10px;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 250px;
+}
+
+.working-hours th,
+.working-hours td {
+  border: 1px solid #555;
+  padding: 4px 8px;
+  font-size: 13px;
+}
+
+.working-hours th {
+  background-color: #3a3a3a;
+  text-align: left;
+}
